@@ -1,0 +1,19 @@
+https://arxiv.org/pdf/1910.05577
+
+-'Global context information is incorporated into local features before they are fed into convolutional layers
+-Explicity model the relationships between different parts of the image
+-The first layer is a pooling layer similar to gse, but it is not an average pooling but instead a segmented
+pooling layer
+-Then there is a context encoding layer that uses a linear layer to drop a dim to 2d
+-After this there are 2 different paths, they justify this as it is lighter wieght then combining the two paths
+-The first path is a channel interaction layer that uses a grouped linear layer to model the relationships between
+different channels (need to specify number of groups)
+-Then the ouput of the channel interacting layer is passed through a the same linear layer as the 
+context encoding output simeltaneously this output is added together to form the final output
+which is 4d and is convolved with the input image
+
+-This models adaptive kernel learning in a different way than GSE but gets a bunch of good ideas
+1-Pooling layer to reduce the dimensionality of the input but not 1x1
+2-Keeping the module light weight by having two paths and also constantly reducing the dimensionality
+and size of the tensor
+
