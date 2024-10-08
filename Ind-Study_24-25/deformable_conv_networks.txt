@@ -1,0 +1,7 @@
+https://arxiv.org/pdf/1703.06211
+
+-Used sampling with eg. 3x3 kernels over the image as a convolution
+-Learns the location of where the image should be sampled adaptively. Thus the location where the samples are taken from are condutioned
+on the input image
+-This means that the convolution isn't done in a 'sweep' but instead applied to relevant areas
+-Interesting idea, but isn't really relevant to GSE
