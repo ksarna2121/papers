@@ -1,0 +1,13 @@
+https://arxiv.org/pdf/1610.02357
+
+-Based on the idea that cross channel correclations and spatial correclations can be completely decoupled
+-i.e each channel can be treated as a separate entity
+
+-Using these things called seperableConvolutional 
+-initially a pointwise convolution is applied to the input tensor this gets the tensor to the size we want
+-then we do a seperable convolution on the tensor where we seperate the tensor into the number of channels we want
+then a nxn convolution is applied to each of these 'slices' of the tensor
+-They use residual/skip connections between each layer of seperable convolution
+
+-The way the architecture is laid ut looks very similar to GSE in the sense that the tensor
+gets deeper and deeper and the spatial dimensions get smaller and smaller throughout the network
